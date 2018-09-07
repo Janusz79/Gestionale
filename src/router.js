@@ -10,17 +10,26 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "scrivania",
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/impostazioni",
+      name: "impostazioni",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "/utenti",
+      name: "utenti",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "utenti" */ "./views/Utenti.vue")
     }
   ]
 });
